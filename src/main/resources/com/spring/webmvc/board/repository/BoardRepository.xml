@@ -14,7 +14,7 @@
 
     <select id="findAll" resultMap="boardMap">
         SELECT *
-        FROM tbl_board
+        FROM tbl_board order by board_no desc
     </select>
     <select id="findOne" resultMap="boardMap">
         SELECT *

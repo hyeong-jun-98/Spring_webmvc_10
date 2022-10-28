@@ -55,9 +55,14 @@
                 <tr>
                     <td>${b.boardNo}</td>
                     <td>${b.writer}</td>
-                    <td title="${b.title}">${b.title}</td>
+                    <td title="${b.title}">
+                            ${b.shortTitle}
+                        <c:if test = "${b.newArticle}">
+                                <span class="badge bg-danger">New</span>
+                        </c:if>
+                    </td>
                     <td>0</td>
-                    <td>${b.regDate}</td>
+                    <td>${b.prettierDate}</td>
                 </tr>
             </c:forEach>
         </table>
